@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculadora de médias</title>
+    <title>Average Calculator</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,28 +12,30 @@
 <body>
     <div class="container">
         <header>
-            <h1>Calculadora de médias</h1>
+            <h1>Average Calculator</h1>
         </header>
         <form id="form-atividade">
-            <input id="nome-atividade" type="text" required placeholder="Nome da atividade" />
-            <input id="nota-atividade" type="number" required placeholder="Nota" min="0" max="10" />
-            <button type="submit">+ Adicionar atividade</button>
+            <input id="nome-atividade" type="text" required placeholder="Assignment name" />
+            <input id="nota-atividade" type="number" required placeholder="Grade" min="0" max="10" />
+            <button type="submit">+ Add assignment</button>
         </form>
         <table>
             <thead>
                 <tr>
-                    <th>Nome da atividade </th>
-                    <th>Nota</th>
-                    <th >Resultado</th>
+                    <th>Assignment name</th>
+                    <th>Grade</th>
+                    <th>Result</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
             </tbody>
             <tfoot>
                 <tr>
-                    <td>Média final</td>
+                    <td>Final grade</td>
                     <td id="media-final-valor">---</td>
                     <td id="media-final-resultado"><span class="resultado aprovado">---</span></td>
+                    <td><button class="delete-all-btn" onclick="deleteAllAssignments()" title="Delete all assignments">×</button></td>
                 </tr>
             </tfoot>
         </table>

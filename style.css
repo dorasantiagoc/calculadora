@@ -69,6 +69,7 @@ form button {
 
 table {
     width: 100%;
+    border-collapse: collapse;
 }
 
 table th {
@@ -76,25 +77,24 @@ table th {
     font-size: 12px;
     font-weight: 500;
     padding: 8px 16px;
-    width: 100%;
     text-align: left;
+    border-bottom: 1px solid #DCDCDC;
 }
 
 table td {
     font-size: 12px;
     padding: 16px;
     color: #000;
-    width: 100%;
     border-top: 1px solid #DCDCDC;
 }
 
-table tfoot td {
+table tfoot tr {
+    background-color: white !important;
     border-bottom: 1px solid #DCDCDC;
 }
 
-table tfoot {
-    font-weight: 500;
-    background-color: #F5F5F5;
+table tfoot td {
+    background-color: white !important;
 }
 
 .aprovado {
@@ -103,4 +103,43 @@ table tfoot {
 
 .reprovado {
     color: #DA000C;
+}
+
+table th:last-child {
+    text-align: center;
+    width: 50px;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+table td:last-child {
+    text-align: center;
+    width: 50px;
+    border-top: 1px solid #DCDCDC;
+}
+
+.delete-btn,
+.delete-all-btn {
+    background: none;
+    border: none;
+    color: #898989;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.delete-btn:hover,
+.delete-all-btn:hover {
+    color: #000;
+}
+
+table tfoot td:last-child {
+    text-align: center;
+    width: 50px;
+    background-color: white !important;
 }
